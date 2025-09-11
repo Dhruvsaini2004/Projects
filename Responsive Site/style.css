@@ -4,6 +4,11 @@
 }
 
 @font-face {
+    font-family: HelLite;
+    src: url(/Helvetica_NTUXwLmxSC.ttf);
+}
+
+@font-face {
     font-family: Helvatica;
     src: url(/HelveticaNowDisplay-Medium_2wEhlmo-TD.ttf);
 }
@@ -21,9 +26,11 @@ html {
     background-color: #0C0C0C;
     transition: 0.5s;
 }
+
 body::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
+
 nav {
     display: flex;
     align-items: center;
@@ -34,9 +41,9 @@ nav {
     font-size: 1rem;
     position: fixed;
     width: 100%;
-    ;
-    filter: blur();
+    backdrop-filter: blur(5px);
     font-weight: 100;
+    z-index: 10;
 }
 
 .logo {
@@ -319,11 +326,13 @@ main section {
     main section {
         padding: 10px;
     }
-    .left .price{
+
+    .left .price {
         margin-top: 20px;
-         font-size: 1.6rem;
+        font-size: 1.6rem;
 
     }
+
     .detail h4 {
         width: 100%;
         font-size: 12px;
@@ -339,27 +348,167 @@ main section {
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 13.5vw;
 }
-.section2 div h1{
-    font-size: 10vw;
+
+.section2 div h1 {
+    font-size: 9rem;
     position: relative;
     background-image: url(https://ik.imagekit.io/sheryians/Aptitude%20&%20Reasoning/mask%20Large_ZB4lGN8hWZ.png);
     color: transparent;
     background-clip: text;
     /* background-size: cover; */
 }
-.section2 h1.bloom{
+
+.section2 h1.bloom {
     position: absolute;
     filter: blur(70px);
 }
 
-.subHeading{
-    font-size: 2.8rem;
+.subHeading {
+    font-size: 2.62rem;
     margin-bottom: 7vw;
     font-weight: 100;
     color: #E9E9E9;
 }
 
-.bloom-img img{
-    width: 92%;
+.bloom-img img {
+    width: 95%;
+}
+
+
+/**********************************SECTION3**********************************/
+
+.section3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    padding: 5vh 4vw;
+    color: #E9E9E9;
+}
+
+.section3 h1 {
+    font-size: 10rem;
+}
+
+.section3 h3 {
+    font-size: 1.9rem;
+    font-family: HelLite;
+    font-weight: 100;
+}
+
+.highlight {
+    color: #02e797;
+}
+
+.diff {
+    margin-top: 8rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.diff-title {
+    width: min(100%, 37rem);
+    border: 3px dashed #666;
+    border-bottom: none;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 1.5rem 0rem;
+    position: relative;
+}
+
+.title-con {
+    text-align: center;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -85%);
+    background-color: black;
+    padding: 0 1rem;
+    text-wrap: nowrap;
+}
+
+.title-con h3 {
+    font-size: 2.6rem;
+    font-weight: 400;
+    letter-spacing: -0.08rem;
+}
+
+.diff-con {
+    display: flex;
+    width: min(100%, 63.5rem);
+    gap: 7rem;
+}
+
+.left-card,
+.right-card {
+    background-color: #222222;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 7px;
+    height: fit-content;
+}
+
+.card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.1rem;
+    border-bottom: 1px solid black;
+}
+
+.card-head h3 {
+    font-size: 1.7rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-body hr {
+    border-color: #313131;
+    border-style: dashed;
+    margin: 1.5rem 0;
+}
+
+.card-body ul li {
+    font-size: 1.25rem;
+    margin-bottom: 3.5rem;
+}
+
+.card-body .tag {
+    border-radius: 6px;
+    background-color: #434343;
+    padding: 0.5rem 1rem;
+    width: fit-content;
+    font-size: 0.9rem;
+    margin-bottom: 1.4rem;
+    color: #adaaaa;
+}
+
+.card-body .rounds li {
+    margin-bottom: 0.8rem;
+    color: #e3e1e1;
+    font-size: 1.2rem;
+}
+
+.right-card .card-body ul li {
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
+    line-height: 1.35;
+    font-weight: 400;
+}
+
+.other {
+    color: #E54B3C;
+}
+
+ul {
+    list-style: none;
 }

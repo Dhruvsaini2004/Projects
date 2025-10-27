@@ -12,8 +12,8 @@ userInput.focus();
 
 const p = document.createElement("p");
 
-let gamekey = true;
-if (gamekey) {
+let KEY = true;
+if (KEY) {
     submit.addEventListener("click", (e) => {
         e.preventDefault();
         const guess = parseInt(userInput.value);
@@ -86,7 +86,7 @@ function endGame() {
     p.classList = "button";
     p.innerHTML = `<h2 id="newGame">Start New Game</h2>`;
     startOver.appendChild(p);
-    gamekey = false;
+    KEY = false;
     newGame();
 }
 
@@ -102,6 +102,6 @@ function newGame() {
         userInput.focus();
         startOver.removeChild(p);
         displayMessage("");
-        gamekey = true;
+        KEY = true;
     });
 }

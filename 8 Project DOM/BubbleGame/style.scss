@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  background: linear-gradient(90deg, rgb(180, 216, 196), rgb(41, 196, 149));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .container {
+    height: 80%;
+    width: 60%;
+    background-color: rgb(172, 231, 199);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: -5px 5px 15px rgb(0, 0, 0);
+    .top {
+      height: 15%;
+      background: linear-gradient(90deg, lightgreen, green);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 4rem;
+      .score,
+      .timer,
+      .hit {
+        background-color: white;
+        padding: 0.1rem 0.5rem;
+        border-radius: 3px;
+      }
+    }
+    .bottom {
+      display: flex;
+      gap: 5px;
+      padding: 12px 20px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      height: 85%;
+      button {
+        position: relative;
+        overflow: hidden;
+        padding: 12px 18px;
+        border: none;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.875);
+        font-size: 1.5rem;
+        font-weight: 600;
+        z-index: 1;
+        transition: all 1s ease;
+        box-shadow: 0 0 8px black;
+        outline: none;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -100px;
+          transform: skewX(45deg);
+          height: 100%;
+          width: 0;
+          background-color: seagreen;
+          transition: width 0.5s ease;
+          z-index: -1;
+        }
+
+        &:hover::before {
+          width: 200%;
+        }
+
+        &:hover {
+          color: white;
+          cursor: pointer;
+        }
+
+        &:active {
+          transform: scale(0.95);
+        }
+      }
+
+      .ball {
+        background-color: rgb(77, 180, 121);
+        height: 53px;
+        width: 53px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        &:hover {
+          cursor: pointer;
+          background-color: rgba(3, 95, 3, 0.688);
+        }
+      }
+    }
+  }
+}

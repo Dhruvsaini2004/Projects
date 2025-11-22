@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Guess The Number</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #1f1c2c, #928dab);
+        color: #fff;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .container {
+        background: rgba(0, 0, 0, 0.75);
+        padding: 30px 40px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+        width: 350px;
+        animation: fadeIn 0.6s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      h1 {
+        margin-bottom: 20px;
+        font-size: 28px;
+        color: #f5ba42;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+      }
+
+      input[type="text"] {
+        padding: 12px;
+        width: 70%;
+        border: none;
+        border-radius: 10px;
+        outline: none;
+        font-size: 16px;
+        margin-bottom: 15px;
+        text-align: center;
+        transition: 0.3s;
+      }
+
+      input[type="text"]:focus {
+        box-shadow: 0 0 10px #f5ba42;
+      }
+
+      input[type="button"],
+      #newGame {
+        background: #f5ba42;
+        border: none;
+        border-radius: 12px;
+        padding: 12px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        color: #222;
+        transition: background 0.3s, transform 0.2s;
+        margin-top: 10px;
+      }
+
+      input[type="button"]:hover,
+      #newGame:hover {
+        background: #ffcc66;
+        transform: scale(1.05);
+      }
+
+      .result {
+        margin-top: 20px;
+        font-size: 16px;
+      }
+
+      .preGuesses,
+      .Chances {
+        font-weight: bold;
+        color: #f5ba42;
+      }
+
+      .LowOrHi h2 {
+        margin-top: 15px;
+        font-size: 20px;
+        color: #ff7b7b;
+        text-shadow: 0 0 8px rgba(255, 123, 123, 0.6);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🎯 Guess The Number</h1>
+      <form>
+        <div class="guess">
+          <input
+            type="text"
+            name="guess"
+            id="guess"
+            autocomplete="off"
+            placeholder="Enter 1 - 100"
+          />
+        </div>
+        <div class="button">
+          <input type="button" value="Submit" id="submit" />
+        </div>
+      </form>
+
+      <div class="result">
+        <p>Previous Guesses: <span class="preGuesses"></span></p>
+        <p>Chances Left: <span class="Chances">10</span></p>
+        <p class="LowOrHi"></p>
+      </div>
+    </div>
+
+    <script src="project4.js"></script>
+  </body>
+</html>
